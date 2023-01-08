@@ -2,4 +2,8 @@
     <string name="app_name">My Application</string>
     <string name="title_activity_text_element">TextElement</string>
     <string name="title_activity_modifier">ModifierActivity</string>
+    <string name="title_activity_width_and_height">WidthAndHeightActivity</string>
+    <string name="title_activity_button">ButtonActivity</string>
+    <string name="title_activity_image">ImageActivity</string>
+    <string name="title_activity_text_feild">TextFeildActivity</string>
 </resources>
