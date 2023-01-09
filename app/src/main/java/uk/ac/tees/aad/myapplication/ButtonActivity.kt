@@ -46,11 +46,18 @@ fun Greeting3(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview4() {
-    SimpleButton()
-    //MultipleText()
-    //IconWithButton()
-    //ButtonWithShape()
-    //OutlineBorderButton()
+
+    Column( modifier = Modifier
+        .fillMaxSize().padding(16.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally) {
+
+        SimpleButton()
+        MultipleText()
+        IconWithButton()
+        ButtonWithShape()
+        OutlineBorderButton()
+    }
 }
 
 @Composable
@@ -90,7 +97,7 @@ fun IconWithButton(){
 
 @Composable
 fun ButtonWithShape(){
-    Column(modifier = Modifier.fillMaxSize(),
+    Column(modifier = Modifier,
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
         Button(onClick = {}, shape = RoundedCornerShape(10.dp)) {

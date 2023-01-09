@@ -5,15 +5,13 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -42,9 +40,16 @@ class ImageActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview5() {
     MyApplicationTheme {
-        ImageSample()
-        CircleImage()
-        RoundedCornerImage()
+        Column( modifier = Modifier
+            .fillMaxSize().padding(16.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally) {
+            ImageSample()
+            Spacer(modifier = Modifier.height(8.dp))
+            CircleImage()
+            Spacer(modifier = Modifier.height(8.dp))
+            RoundedCornerImage()
+        }
     }
 }
 
@@ -66,7 +71,7 @@ fun  RoundedCornerImage(){
     Image(painter = painterResource(id = R.drawable.ic_moon),
         contentDescription = "Circle Image", contentScale = ContentScale.Crop,
         modifier = Modifier.size(300.dp)
-            .clip(RoundedCornerShape(10))
-            .border(1.dp, Color.Transparent, RoundedCornerShape(10))
+            .clip(RoundedCornerShape(15))
+            .border(1.dp, Color.Transparent, RoundedCornerShape(15))
             .padding(8.dp))
 }

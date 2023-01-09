@@ -6,4 +6,8 @@
     <string name="title_activity_button">ButtonActivity</string>
     <string name="title_activity_image">ImageActivity</string>
     <string name="title_activity_text_feild">TextFeildActivity</string>
+    <string name="title_activity_lazy_column_and_row">LazyColumnAndRowActivity</string>
+    <string name="title_activity_scaffold">ScaffoldActivity</string>
+    <string name="title_activity_card">CardActivity</string>
+    <string name="title_activity_progress_indicator">ProgressIndicatorActivity</string>
 </resources>

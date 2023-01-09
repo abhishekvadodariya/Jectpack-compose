@@ -3,10 +3,7 @@ package uk.ac.tees.aad.myapplication
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
@@ -47,16 +44,24 @@ fun Greeting4(name: String) {
 @Composable
 fun DefaultPreview6() {
     MyApplicationTheme {
-        TextFieldExample()
-        TextFieldWithPlaceholder()
-        TextFieldWithIcon()
-        OutlineTextFieldWithIcon()
+        Column( modifier = Modifier
+            .fillMaxSize().padding(1.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally) {
+            TextFieldExample()
+            Spacer(modifier = Modifier.height(10.dp))
+            TextFieldWithPlaceholder()
+            Spacer(modifier = Modifier.height(10.dp))
+            TextFieldWithIcon()
+            Spacer(modifier = Modifier.height(10.dp))
+            OutlineTextFieldWithIcon()
+        }
     }
 }
 
 @Composable
 fun TextFieldExample(){
-    Column(modifier = Modifier.fillMaxSize(),
+    Column(
     horizontalAlignment = Alignment.CenterHorizontally,
     verticalArrangement = Arrangement.Center) {
         val text = remember { mutableStateOf(TextFieldValue()) }
@@ -68,7 +73,7 @@ fun TextFieldExample(){
 
 @Composable
 fun TextFieldWithPlaceholder(){
-    Column(modifier = Modifier.fillMaxSize(),
+    Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center) {
         val text = remember { mutableStateOf(TextFieldValue()) }
@@ -80,7 +85,7 @@ fun TextFieldWithPlaceholder(){
 
 @Composable
 fun TextFieldWithIcon(){
-    Column(modifier = Modifier.fillMaxSize(),
+    Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center) {
         val text = remember { mutableStateOf(TextFieldValue()) }
@@ -95,7 +100,7 @@ fun TextFieldWithIcon(){
 
 @Composable
 fun OutlineTextFieldWithIcon(){
-    Column(modifier = Modifier.fillMaxSize(),
+    Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center) {
         val text = remember { mutableStateOf(TextFieldValue()) }

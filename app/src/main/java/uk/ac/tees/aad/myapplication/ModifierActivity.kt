@@ -40,24 +40,27 @@ class ModifierActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview2() {
-        //CircularImage()
-    //FillWidthModifier()
-    WeightModifier()
+    Column( modifier = Modifier
+        .fillMaxSize().padding(16.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally) {
+        CircularImage()
+        Spacer(modifier = Modifier.height(10.dp))
+        FillWidthModifier()
+        Spacer(modifier = Modifier.height(10.dp))
+        FillHeightModifier()
+        Spacer(modifier = Modifier.height(10.dp))
+        WeightModifier()
+    }
 }
 
 @Composable
