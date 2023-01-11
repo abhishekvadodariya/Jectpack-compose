@@ -63,7 +63,7 @@ fun ImageSample(){
 fun  CircleImage(){
     Image(painter = painterResource(id = R.drawable.ic_moon),
         contentDescription = "Circle Image", contentScale = ContentScale.Crop,
-        modifier = Modifier.size(300.dp).clip(CircleShape).border(1.dp, Color.Black, CircleShape))
+        modifier = Modifier.size(200.dp).clip(CircleShape).border(1.dp, Color.Black, CircleShape))
 }
 
 @Composable
@@ -71,7 +71,7 @@ fun  RoundedCornerImage(){
     Image(painter = painterResource(id = R.drawable.ic_moon),
         contentDescription = "Circle Image", contentScale = ContentScale.Crop,
         modifier = Modifier.size(300.dp)
-            .clip(RoundedCornerShape(15))
+            .clip(RoundedCornerShape(12))
             .border(1.dp, Color.Transparent, RoundedCornerShape(15))
             .padding(8.dp))
 }

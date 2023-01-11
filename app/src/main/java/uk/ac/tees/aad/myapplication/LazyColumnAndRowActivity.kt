@@ -34,6 +34,7 @@ class LazyColumnAndRowActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
+                    DefaultPreview7()
                 }
             }
         }
@@ -45,15 +46,15 @@ class LazyColumnAndRowActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview7() {
     MyApplicationTheme {
-        //ListListScopeSample()
-        //CityListView()
+        ListScopeSample()()
+        CityListView()
         PrepareList()
     }
 }
 
 @Composable
-fun ListListScopeSample(){
-    LazyColumn {
+fun ListScopeSample(){
+    LazyColumn(modifier = Modifier.padding(10.dp)) {
         // Add a single item
         item {
             Text(text = "Items in Lazy Column")
@@ -81,10 +82,8 @@ fun ListListScopeSample(){
 private val cityList =
     mutableListOf("London", "Mexico", "New York", "Georgetown", "Washington")
 
-private val listModifier = Modifier
-    .fillMaxSize()
-    .background(Color.LightGray)
-    .padding(10.dp)
+private val listModifier = Modifier.fillMaxSize()
+    .background(Color.LightGray).padding(10.dp)
 
 
 @Composable
@@ -145,15 +144,16 @@ fun CountryRowList(model: CountryModel) {
             contentDescription = "",
             contentScale = ContentScale.Crop,
             modifier = Modifier
-                .size(80.dp)
+                .size(50.dp)
                 .padding(5.dp)
         )
         Spacer(modifier = Modifier.width(8.dp))
         Text(
             text = model.name,
-            fontSize = 24.sp,
+            fontSize = 16.sp,
             fontWeight = FontWeight.SemiBold,
             color = Color.Black
         )
     }
 }
+

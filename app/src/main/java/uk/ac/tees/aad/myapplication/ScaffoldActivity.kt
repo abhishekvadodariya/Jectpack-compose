@@ -33,7 +33,9 @@ class ScaffoldActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
-                ) {}
+                ) {
+                    DefaultPreview8()
+                }
             }
         }
     }

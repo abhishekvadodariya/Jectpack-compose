@@ -28,7 +28,7 @@ class TextFieldActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting4("Android")
+                    DefaultPreview6()
                 }
             }
         }

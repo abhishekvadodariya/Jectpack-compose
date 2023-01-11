@@ -48,7 +48,7 @@ fun DefaultPreview10() {
 @Composable
 fun CircularProgressIndicatorExample() {
     CircularProgressIndicator(
-        progress = 0.6f,
+        progress = 0.7f,
         modifier = Modifier
             .size(size = 64.dp)
             .rotate(degrees = 45f),
@@ -63,7 +63,7 @@ private fun LinearProgressIndicator(){
         LinearProgressIndicator(progress =0.6f,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(8.dp),
+                .height(6.dp),
             backgroundColor = Color.LightGray,
             color = Color.Blue //progress color
         )

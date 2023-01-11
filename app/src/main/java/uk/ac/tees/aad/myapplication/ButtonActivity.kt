@@ -31,7 +31,8 @@ class ButtonActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting3("Android")
+                    //Greeting3("Android")
+                    DefaultPreview4()
                 }
             }
         }
@@ -51,7 +52,6 @@ fun DefaultPreview4() {
         .fillMaxSize().padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
-
         SimpleButton()
         MultipleText()
         IconWithButton()
@@ -120,8 +120,8 @@ fun ButtonWithShape(){
 
 @Composable
 fun OutlineBorderButton(){
-    Button(onClick = {}, border = BorderStroke(1.dp, Color.Red), shape = RoundedCornerShape(50),
-    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Red)) {
+    Button(onClick = {}, border = BorderStroke(1.dp, Color.Blue), shape = RoundedCornerShape(50),
+    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.Blue)) {
         Text(text = "Save")
     }
 }

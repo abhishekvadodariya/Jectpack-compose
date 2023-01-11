@@ -40,6 +40,7 @@ class ModifierActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
+                    DefaultPreview2()
                 }
             }
         }
@@ -49,8 +50,8 @@ class ModifierActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview2() {
-    Column( modifier = Modifier
-        .fillMaxSize().padding(16.dp),
+    Column( modifier = Modifier.padding(10.dp)
+        .fillMaxSize().padding(1.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
         CircularImage()

@@ -30,6 +30,8 @@ class WidthAndHeightActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
+                    //Greeting2("Hello World")
+                    DefaultPreview3()
                 }
             }
         }
@@ -44,6 +46,7 @@ fun Greeting2(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview3() {
+    //Greeting2("Android")
     WidthAndHeightWithModifier()
 }
 

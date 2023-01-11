@@ -13,6 +13,15 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".JetpackComposeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.MyApplication">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ProgressIndicatorActivity"
             android:exported="false"
             android:label="@string/title_activity_progress_indicator"
@@ -32,7 +41,7 @@
         </activity>
         <activity
             android:name=".ScaffoldActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_scaffold"
             android:theme="@style/Theme.MyApplication">
             <meta-data
@@ -41,7 +50,7 @@
         </activity>
         <activity
             android:name=".LazyColumnAndRowActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_lazy_column_and_row"
             android:theme="@style/Theme.MyApplication">
             <meta-data
@@ -50,7 +59,7 @@
         </activity>
         <activity
             android:name=".TextFieldActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_text_feild"
             android:theme="@style/Theme.MyApplication">
             <meta-data
@@ -77,24 +86,24 @@
         </activity>
         <activity
             android:name=".WidthAndHeightActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_width_and_height"
             android:theme="@style/Theme.MyApplication">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ModifierActivity"
             android:exported="true"
             android:label="@string/title_activity_modifier"
             android:theme="@style/Theme.MyApplication">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
